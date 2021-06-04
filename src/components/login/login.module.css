@@ -1,0 +1,28 @@
+.container{
+    max-width:500px;
+    margin: auto;
+    border: 1px solid #ccc;
+    margin-top: 50px;
+    padding: 15px;
+    box-shadow: 0 0 3px #555;
+    height: 400px;
+}
+.blueText {
+    color:royalblue;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 15px auto;
+}
+.input{
+    height: 35px;
+    padding: 3px 5px;
+}
+.signInBtn {
+    color: #fff;
+    background-color: royalblue;
+    height: 35px;
+    border:none;
+    margin:0;
+    padding: 3px 5px;
+    border-radius: 0px 5px 5px 0;
+}
