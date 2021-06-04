@@ -16,6 +16,7 @@
 .input{
     height: 35px;
     padding: 3px 5px;
+    width: 130px;
 }
 .signInBtn {
     color: #fff;
@@ -25,4 +26,8 @@
     margin:0;
     padding: 3px 5px;
     border-radius: 0px 5px 5px 0;
+    cursor: pointer;
+}
+.signInBtn:disabled{
+    background-color: #555;
 }
