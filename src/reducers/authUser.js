@@ -1,6 +1,7 @@
 import {SET_AUTH_USER,LOGOUT} from '../actions/authUser'
 
-const authenticatedUserReducer = (state= {id:null},action)=>{
+const initialState = localStorage.getItem('authUser')
+const authenticatedUserReducer = (state= {id:initialState},action)=>{
     switch(action.type){
         case SET_AUTH_USER:
             return {id:action.id};

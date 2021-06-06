@@ -11,3 +11,8 @@ export const answerQuestion = answerDetails => ({
     type: ANSWER_QUESTIONS,
     answerDetails
 })
+
+export const saveQuestion = question => ({
+    type: SAVE_QUESTION,
+    question
+})

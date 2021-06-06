@@ -1,8 +1,18 @@
-import { _getUsers, _getQuestions ,_saveQuestionAnswer} from "../utils/_DATA"
+import { _getUsers, _getQuestions ,_saveQuestionAnswer , _saveQuestion} from "../utils/_DATA"
 import { updateUsers } from "./users"
-import { updateQuestions,answerQuestion } from './questions'
+import { updateQuestions,answerQuestion, saveQuestion } from './questions'
+import { setAuthUser , logoutUser } from './authUser'
 
 
+export const handleLogin= (userId) => (dispatch,getState) => {
+    localStorage.setItem('authUser',userId);
+    dispatch(setAuthUser(userId))
+}
+
+export const handleLogOut= () => (dispatch,getState) => {
+    localStorage.setItem('authUser','');
+    dispatch(logoutUser())
+}
 export const getUsers = () => (dispatch,getState) => {
    return _getUsers().then(users => dispatch(updateUsers(users)));
 }
@@ -16,9 +26,13 @@ export const getQuestions = (cb) => (dispatch,getState) => {
  }
 
  export const handleQuestionAnswer = (questionDetails,ownProps) => (dispatch,getState) => {
-     return _saveQuestionAnswer(questionDetails).then(res => {
-         console.log('OwnProps',ownProps);
-         
+     return _saveQuestionAnswer(questionDetails).then(res => {         
          dispatch(answerQuestion(questionDetails))
      })
  }
+
+ export const handleSaveQuestion = (question) => (dispatch,getState) => {
+    return _saveQuestion(question).then(formatedQuestion => {        
+        dispatch(saveQuestion(formatedQuestion))
+    })
+}

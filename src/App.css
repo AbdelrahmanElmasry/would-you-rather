@@ -27,7 +27,11 @@
 .App-link {
   color: #61dafb;
 }
-
+.blueText{
+  color: royalblue;
+  font-weight: 900;
+  font-style: italic;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

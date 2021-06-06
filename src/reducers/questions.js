@@ -1,4 +1,4 @@
-import { UPDATE_QUESTIONS,ANSWER_QUESTIONS } from "../actions/questions";
+import { UPDATE_QUESTIONS,ANSWER_QUESTIONS, SAVE_QUESTION } from "../actions/questions";
 
 const questionsReducer = (state = {},action) => {
     switch(action.type){
@@ -18,6 +18,13 @@ const questionsReducer = (state = {},action) => {
                             action.answerDetails.authedUser
                         )
                     }
+                }
+            }
+        case SAVE_QUESTION:
+            return {
+                ...state,
+                [action.question.id]:{
+                    ...action.question
                 }
             }
         default:

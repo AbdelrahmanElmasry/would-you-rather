@@ -9,7 +9,7 @@ export default function QuestionForm(props) {
     const dispatch = useDispatch();
     const [selectedOption,setSelectedOption] = useState(null);
     const authUser = useSelector(state => state.authUser)
-    const questions = useSelector(state => state.questions)
+    // const questions = useSelector(state => state.questions)
     const history  = useHistory()
     const users = useSelector(state => state.users)
     const {question} = props;

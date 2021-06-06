@@ -29,7 +29,7 @@ export default function Question(props) {
                         <Avatar size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }} src={author.avatarURL}></Avatar>
                     </Col>
                     <Col flex={3}>
-                        <h2><b>Would you rather</b></h2>
+                        <h2 className={'blueText'}>Would you rather</h2>
                         <p>{question.optionOne.text}...{question.optionTwo.text.substring(0,10)}...</p>
                         <Link to={{
                                 pathname:`/questions/${question.id}`,

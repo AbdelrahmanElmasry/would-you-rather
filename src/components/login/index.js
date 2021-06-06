@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Avatar } from 'antd'
 import styles from './login.module.css'
-import { setAuthUser } from '../../actions/authUser';
+import { handleLogin } from '../../actions';
 import { Redirect, withRouter } from 'react-router-dom';
 
 class Login extends Component {
@@ -21,7 +21,7 @@ class Login extends Component {
         const {dispatch,users} = this.props;
         Object.keys(users).forEach(userId => {
             if(users[userId].id === currentUser){
-                dispatch(setAuthUser(userId))
+                dispatch(handleLogin(userId))
                 this.setState({isAuthentcated:true})
                 return;
             }

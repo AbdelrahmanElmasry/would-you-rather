@@ -33,7 +33,7 @@ function QuestionInfo(props) {
     return (
         <div>
             <h2>Asked by <Avatar   style={{ backgroundColor: '#f56a00'}} src={author.avatarURL} /> {author.name}</h2>
-            {optionsData.map(option => <QuestionInfoStates {...option} />)}
+            {optionsData.map(option => <QuestionInfoStates key={option.option} {...option} />)}
         </div>
     )
 }
