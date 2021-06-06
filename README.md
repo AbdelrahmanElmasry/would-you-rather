@@ -8,7 +8,7 @@ To get started:
 ```console
 npm install
 ```
-* install all project dependencies with
+* start the app with
 ```console
 npm start
 ```
