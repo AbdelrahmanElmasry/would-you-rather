@@ -1,0 +1,18 @@
+.activeNav{
+    color:#fff;
+    font-weight: 900;
+}
+.userInfo{
+    border-bottom: 1px solid #f0f0f0;
+}
+.userName{
+    font-weight: 900;
+    color:royalBlue;
+    margin-left: 10px;
+}
+.logoutBtn{
+    background-color: royalblue !important;
+    color: #fff !important;
+    margin-left: 5px;
+    font-weight:900 !important;
+}
