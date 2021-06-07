@@ -26,12 +26,23 @@ export const getQuestions = (cb) => (dispatch,getState) => {
  export const handleQuestionAnswer = (questionDetails,ownProps) => (dispatch,getState) => {
      return _saveQuestionAnswer(questionDetails).then(res => {         
          dispatch(answerQuestion(questionDetails));
+         //update users data as side effect
          _getUsers().then(users => dispatch(updateUsers(users)));
+         //update questions as side effect
+         _getQuestions().then(questions => {
+            dispatch(updateQuestions(questions))
+        });
      })
  }
 
  export const handleSaveQuestion = (question) => (dispatch,getState) => {
     return _saveQuestion(question).then(formatedQuestion => {        
         dispatch(saveQuestion(formatedQuestion))
+        //update users data as side effect
+        _getUsers().then(users => dispatch(updateUsers(users)));
+         //update questions as side effect
+        _getQuestions().then(questions => {
+            dispatch(updateQuestions(questions))
+        });
     })
 }
