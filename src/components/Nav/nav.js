@@ -11,7 +11,7 @@ const Nav = (props) => {
         const dispatch = useDispatch();
         return (
             <Layout.Header style={{backgroundColor:'transparent',display:'flex'}}>
-                <Menu theme='light' mode="horizontal" defaultSelectedKeys={['1']} style={{display:"flex",width:'75%'}}>
+                <Menu key={'navBar'} theme='light' mode="horizontal" defaultSelectedKeys={['1']} style={{display:"flex",width:'75%'}}>
                     <NavItem to='/home' key={1} exact >Home</NavItem>
                     <NavItem to='/leaderboard' key={2} exact>Leaderboard</NavItem>
                     <NavItem to='/add' key={3} exact >New Question</NavItem>

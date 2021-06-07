@@ -33,12 +33,12 @@ class App extends Component{
         <div className="App">
           <Nav />
         <Switch>
-          <PrivateRoute path='/questions/:id' Component={QuestionDetails} />
-          <PrivateRoute path={['/','/home']} exact Component={Questions} />
-          <PrivateRoute path={'/add'} Component={NewQuestion} />
-          <PrivateRoute path={'/leaderboard'} Component={LeaderBoard} />
-          <Route path={['/login']} component={Login} />
-          <Route path='*' component={Page404} />
+          <PrivateRoute key={1} path='/questions/:id' Component={QuestionDetails} />
+          <PrivateRoute key={2}path={['/','/home']} exact Component={Questions} />
+          <PrivateRoute key={3}path={'/add'} Component={NewQuestion} />
+          <PrivateRoute key={4}path={'/leaderboard'} Component={LeaderBoard} />
+          <Route key={5} path={'/login'} component={Login} />
+          <Route key={6} path='*' component={Page404} />
         </Switch>
       </div>
     );

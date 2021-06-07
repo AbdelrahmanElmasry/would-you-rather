@@ -5,8 +5,9 @@ import QuestionInfo from './QuestionInfo';
 import Page404 from '../404/Page404'
 function QuestionDetails(props) {
     const questionId = props.match.params.id;
+    console.log(props);
     
-    if(!props.questions[questionId]){
+    if(!props.questions[questionId] || !props.location.state){
         return <Page404 />
     }
     const question = props.questions[questionId]

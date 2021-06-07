@@ -5,12 +5,10 @@ import { setAuthUser , logoutUser } from './authUser'
 
 
 export const handleLogin= (userId) => (dispatch,getState) => {
-    localStorage.setItem('authUser',userId);
     dispatch(setAuthUser(userId))
 }
 
 export const handleLogOut= () => (dispatch,getState) => {
-    localStorage.setItem('authUser','');
     dispatch(logoutUser())
 }
 export const getUsers = () => (dispatch,getState) => {
@@ -27,7 +25,8 @@ export const getQuestions = (cb) => (dispatch,getState) => {
 
  export const handleQuestionAnswer = (questionDetails,ownProps) => (dispatch,getState) => {
      return _saveQuestionAnswer(questionDetails).then(res => {         
-         dispatch(answerQuestion(questionDetails))
+         dispatch(answerQuestion(questionDetails));
+         _getUsers().then(users => dispatch(updateUsers(users)));
      })
  }
 

@@ -5,11 +5,12 @@ import styles from './Nav.module.css'
 
 export default function NavItem(props) {
     return (
-        <Menu.Item key={props.key} >
+        <Menu.Item tabIndex={props.eventKey} eventKey={props.eventKey}>
             <NavLink
                 activeClassName={styles.activeNav}
                 to={props.to}
                 exact={props.exact}
+                key={props.to}
             >
                 {props.children}
             </NavLink>
