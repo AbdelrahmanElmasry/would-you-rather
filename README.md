@@ -1,5 +1,5 @@
 # Would you rather... React web game Project
-This is Would you rahter Project for Udacity React program.  
+This is Would you rahter Project.
 
 
 To get started:
@@ -33,4 +33,6 @@ Upon voting in a poll, all of the information of an answered poll is displayed. 
 * Redux-thunk
 * ant-design
 
+## Demo 
+try from [here](https://wouldyou-rather.netlify.app)
 
