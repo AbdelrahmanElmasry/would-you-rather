@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5d2641e-6d28-4ba2-aee7-4ac11e52e9f3/deploy-status)](https://app.netlify.com/sites/wouldyou-rather/deploys)
+
 # Would you rather... React web game Project
 This is Would you rahter Project.
 
